@@ -3,8 +3,8 @@ import pygame, random
 # Game settings
 
 # Snake cell and food size
-WIDTH = 30
-HEIGHT = 30
+WIDTH = 25
+HEIGHT = 25
 
 GAME_SPEED = 20
 
