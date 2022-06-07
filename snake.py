@@ -86,6 +86,11 @@ while True:
     snake.insert(0, snake[0].move(direction))
     snake.pop()
 
+    # show score
+    score_font = pygame.font.SysFont("monospace", 20)
+    score_text = score_font.render(f"Score: {len(snake)-3}", True, (255, 255, 255))
+
+
     # check food collision
     if snake[0].colliderect(food):
         snake.insert(0, snake[0].move(direction))
@@ -110,5 +115,7 @@ while True:
     # draw the snake
     for rect in snake:
         pygame.draw.rect(screen, (255, 255, 255), rect)
+
+    screen.blit(score_text, (30, 30))
 
     pygame.draw.rect(screen, (255, 0, 0), food)
